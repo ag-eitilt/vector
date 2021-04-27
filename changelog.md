@@ -1,4 +1,8 @@
-# Changes in version 0.12.3.0
+# Changes in version 0.12.3.1
+
+ * Fix Haddock crashing on versions of GHC <= 8.4.4
+
+# Changes in version 0.12.3.0 (deprecated)
 
  * Fix performance regression due to introduction of `keepAlive#` primop in ghc-9.0: [#372](https://github.com/haskell/vector/pull/372)
 
