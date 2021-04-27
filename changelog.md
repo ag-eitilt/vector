@@ -1,4 +1,8 @@
-# Changes in version 0.12.2.0
+# Changes in version 0.12.2.1
+
+ * Fix Haddock crashing on versions of GHC <= 8.4.4
+
+# Changes in version 0.12.2.0 (deprecated)
 
  * Add `MINIMAL` pragma to `Vector` & `MVector` type classes: [#11](https://github.com/haskell/vector/issues/11)
  * Export `unstreamM` from`from Data.Vector.Generic`: [#70](https://github.com/haskell/vector/issues/70)
