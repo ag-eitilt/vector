@@ -69,9 +69,15 @@ import Data.Typeable ( Typeable )
 
 
 -- | Mutable boxed vectors keyed on the monad they live in ('IO' or @'ST' s@).
+#if MIN_VERSION_base(4,12,0)
 data MVector s a = MVector {-# UNPACK #-} !Int                -- ^ Offset in underlying array
                            {-# UNPACK #-} !Int                -- ^ Size of slice
                            {-# UNPACK #-} !(MutableArray s a) -- ^ Underlying array
+#else
+data MVector s a = MVector {-# UNPACK #-} !Int
+                           {-# UNPACK #-} !Int
+                           {-# UNPACK #-} !(MutableArray s a)
+#endif
         deriving ( Typeable )
 
 type IOVector = MVector RealWorld
